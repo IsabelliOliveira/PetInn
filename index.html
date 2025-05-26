@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html class="loading" lang="pt" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta name="theme-color" content="#00B5B8">
+    <link rel="icon" sizes="100x100" href="../app-assets/images/logo/icone.png">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>PetInn </title>
+    <link rel="apple-touch-icon" href="../app-assets/images/logo/icone.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../app-assets/images/logo/icone.png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/99bf7606df.js" crossorigin="anonymous"></script>
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/vendors.min.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="../app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="../app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="../app-assets/css/components.css">
+    <!-- END: Theme CSS-->
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="../app-assets/css/core/menu/menu-types/horizontal-menu.css">
+    <link rel="stylesheet" type="text/css" href="../app-assets/css/core/colors/palette-gradient.css">
+    <!-- END: Page CSS-->
+
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+    <!-- END: Custom CSS-->
+
+</head>
+<!-- END: Head-->
+
+<!-- BEGIN: Body-->
+
+<body class="fixed-navbar">
+
+    <header class="w-100 fixed-top shadow bg-primary white">
+        <div class="container">
+            <div class="row py-1">
+                <div class="col-12 col-sm-4 d-flex flex-row align-items-center justify-content-center justify-content-sm-start">
+                    <h1 class="mb-0 h3 h2-sm text-bold-600">PetInn</h1>
+                    <button class="btn p-0 font-medium-3 d-block d-sm-none ml-auto white" onclick="showMenuMobile()"><i class="fas fa-bars"></i></button onclick="location.href = 'reserva-1.html';">
+                </div>
+                <div class="col-12 col-sm-8 pt-2 pt-sm-0" id="nav">
+                    <nav class="d-flex flex-column flex-md-row justify-content-end align-items-sm-center">
+                        <a class="nav-link mx-sm-1 text-bold-600 link-scroll" href="#servicos"><i class="fas fa-bars mr-1"></i>Nossos serviços</a>
+                        <a class="nav-link mx-sm-1 text-bold-600 link-scroll" href="#maisinfo"><i class="fas fa-bars mr-1"></i>Contato</a>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="w-100 pt-3">
+        <div class="container pb-3">
+            <div class="row">
+                <div class="col-12 col-sm-7 order-2 order-sm-1 text-center text-sm-left">
+                    <h2 class="h1 titulo pt-sm-3 py-1 pr-2">Nós da PetInn buscamos oferecer o melhor serviço e atendimento aos nossos clientes.</h2>
+                    <button class="btn btn-outline-primary shadow-sm btn-lg text-bold-600 link-scroll" href="#destaques">Conheça nossos serviços<i class="fa fa-caret-down ml-1"></i></button onclick="location.href = 'site-reserva/reserva-1.html';">
+                </div>    
+                <div class="col-12 col-sm-5 order-1 order-sm-2">
+                    <img class="img-fluid" src="/assets/img/dogs.png">
+                </div>             
+            </div>
+        </div>
+        <div class="container pb-3" id="servicos">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="text-bold-600 pb-2"><i class="fas fa-tags mr-1"></i>Nossos serviços</h3>
+                </div>
+            </div>
+            <div class="row match-height">
+               <div class="col-12 col-sm-4">
+                    <div class="card rounded">
+                        <div class="card-content">
+                            <img src="/assets/img/diaria.jpg" class="card-img-top rounded-top">
+                            <div class="card-body">
+                                <h4 class="text-bold-600">Hospedagem Pet - Diária</h4>
+                                <p>Seu pet bem cuidado enquanto você viaja! Oferecemos acomodações confortáveis, alimentação supervisionada e muito carinho. Ambiente seguro e monitorado 24h.</p>
+                                <p class="float-left"><i class="far fa-clock"></i> 1 diária</p>
+                                <p class="float-right"><i class="far fa-money-bill-alt"></i> R$ 70,00</p>
+                                <button onclick="location.href = 'site-reserva/reserva-1.html';" class="btn btn-outline-primary text-bold-600 shadow-sm btn-block font-medium-2"><i class="fa fa-calendar"></i> Reservar hospedagem</button onclick="location.href = 'site-reserva/reserva-1.html';">
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+                <div class="col-12 col-sm-4">
+                    <div class="card rounded">
+                        <div class="card-content">
+                            <img src="/assets/img/pet-recreação.jpg" class="card-img-top rounded-top">
+                            <div class="card-body">
+                                <h4 class="text-bold-600">Hospedagem + Recreação</h4>
+                                <p>  Além do descanso, seu pet aproveita o dia com atividades supervisionadas, socialização com outros animais e momentos de diversão. Ideal para pets cheios de energia!
+                                </p>
+                                <p class="float-left"><i class="far fa-clock"></i>1 diária</p>
+                                <p class="float-right"><i class="far fa-money-bill-alt"></i> R$ 90,00</p>
+                                <button onclick="location.href = 'site-reserva/reserva-1.html';" class="btn btn-outline-primary text-bold-600 shadow-sm btn-block font-medium-2"><i class="fa fa-calendar"></i> Reservar suíte </button onclick="location.href = 'site-reserva/reserva-1.html';">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <div class="card rounded">
+                        <div class="card-content">
+                            <img src="/assets/img/premiun.jpg" class="card-img-top rounded-top">
+                            <div class="card-body">
+                                <h4 class="text-bold-600">Suíte Individual Premium</h4>
+                                <p>Conforto, segurança e exclusividade para seu pet! Acomodações individuais, ventiladas, com brinquedos, caminha macia e atenção redobrada dos cuidadores. Ideal para animais mais reservados.</p>
+                                <p class="float-left"><i class="far fa-clock"></i> 1 diária</p>
+                                <p class="float-right"><i class="far fa-money-bill-alt"></i> R$ 120,00</p>
+                                <button onclick="location.href = 'site-reserva/reserva-1.html';" class="btn btn-outline-primary text-bold-600 shadow-sm btn-block font-medium-2"><i class="fa fa-calendar"></i> Reservar suíte</button onclick="location.href = 'site-reserva/reserva-1.html';">
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="w-100 bg-primary white" id="maisinfo">
+        <div class="container-fluid px-sm-3 pt-3 text-left">
+            <div class="row">
+                <div class="col-12 col-sm-4 pb-2">
+                    <h3 class="text-bold-600 pb-1 h5"><i class="far fa-clock mr-1"></i>Horário de funcionamento</h3>
+
+                    <div class="row px-2">
+                        <div class="col-4">
+                            <p>Terça</p>
+                        </div>
+                        <div class="col-4">
+                            <p>08:00</p>
+                        </div>
+                        <div class="col-4">
+                            <p>18:00</p>
+                        </div>
+                    </div>
+                    <div class="row px-2">
+                        <div class="col-4">
+                            <p>Quarta</p>
+                        </div>
+                        <div class="col-4">
+                            <p>08:00</p>
+                        </div>
+                        <div class="col-4">
+                            <p>18:00</p>
+                        </div>
+                    </div>
+                    <div class="row px-2">
+                        <div class="col-4">
+                            <p>Quinta</p>
+                        </div>
+                        <div class="col-4">
+                            <p>08:00</p>
+                        </div>
+                        <div class="col-4">
+                            <p>18:00</p>
+                        </div>
+                    </div>
+                    <div class="row px-2">
+                        <div class="col-4">
+                            <p>Sexta</p>
+                        </div>
+                        <div class="col-4">
+                            <p>08:00</p>
+                        </div>
+                        <div class="col-4">
+                            <p>20:00</p>
+                        </div>
+                    </div>
+                    <div class="row px-2">
+                        <div class="col-4">
+                            <p>Sábado</p>
+                        </div>
+                        <div class="col-4">
+                            <p>08:00</p>
+                        </div>
+                        <div class="col-4">
+                            <p>20:00</p>
+                        </div>
+                    </div>
+                    <div class="row px-2">
+                        <div class="col-4">
+                            <p>Domingo</p>
+                        </div>
+                        <div class="col-4">
+                            <p>08:00</p>
+                        </div>
+                        <div class="col-4">
+                            <p>15:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-4 pb-3">
+                    <h3 class="text-bold-600 pb-1 h5"><i class="far fa-address-book mr-1"></i>Dados de contato</h3>
+                    <div class="row px-2">
+                        <div class="col-12">
+                            <p><a href="#" class=""><i class="fas fa-phone-alt mr-1"></i>(11) 2345-5432</a></p>
+                            <p><a href="#" class=""><i class="fab fa-whatsapp mr-1"></i>(11) 92345-5432</a></p>
+                            <p><a href="#" class=""><i class="fas fa-at mr-1"></i>contato@barbeariadosena.com.br</a></p>
+                        </div>
+                    </div>
+                    <h3 class="text-bold-600 pb-1 pt-2 h5"><i class="far fa-money-bill-alt mr-1"></i>Formas de pagamento</h3>
+                    <div class="row px-2">
+                        <div class="col-12">
+                            <p class="">Dinheiro, Cartão de crédito, Cartão de débito.</p>
+                            <div class="d-flex flex-row pagamentos">
+                                <img src="/assets/img/dinheiro.png" class="mr-1">
+                                <img src="/assets/img/mastercard.png" class="mr-1">
+                                <img src="/assets/img/visa.png" class="mr-1">
+                                <img src="/assets/img/elo.png" class="mr-1">
+                                <img src="/assets/img/amex.png" class="mr-1">
+                                <img src="/assets/img/diners.png" class="mr-1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-4 pb-3">
+                    <h3 class="text-bold-600 pb-1 h5"><i class="fas fa-map-marker-alt mr-1"></i>Nossa localização</h3>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="px-2">R. Cerro Corá, 1500 - Vila Romana - São Paulo - SP - 05061-300</p>
+                            <iframe class="shadow-sm rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.8953528569705!2d-46.71162058557555!3d-23.53626596654986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce562aac0fab6b%3A0x2187be28ab2f09ae!2sR.%20Cerro%20Cor%C3%A1%2C%201500%20-%20Vila%20Romana%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005061-300!5e0!3m2!1spt-BR!2sbr!4v1592758588405!5m2!1spt-BR!2sbr" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                    </div>
+                </div>             
+            </div>
+        </div>
+        <div class="container-fluid bg-dark">
+            <div class="row">
+                <div class="col-12 text-center py-1">
+                    <img src="/app-assets/images/logo/icone.png" style="max-height: 25px;">
+                    <img src="/app-assets/images/logo/logo-nome.png" style="max-height: 25px;">
+                </div>                
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="../app-assets/vendors/js/vendors.min.js"></script>
+
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="../app-assets/vendors/js/ui/jquery.sticky.js"></script>
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="../assets/js/core/app-menu.js"></script>
+    <script src="../assets/js/core/app.js"></script>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+    <!-- END: Page JS-->
+
+    <script>
+        
+        $( function() {
+
+            $('.link-scroll').click( function() { 
+                var target = $(this).attr('href');
+                $('#nav').removeClass('show animate__animated animate__fadeIn')
+                $('html, body').animate({ scrollTop: $(target).offset().top - 80 }, 1500);
+            } );
+
+            $('#changeColor').change( function() {
+                changeColor($('#changeColor').val())
+            })
+
+        })
+
+        var corAtual = 'primary'
+        function changeColor(novaCor) {
+            var a = $('[class*="' + corAtual +'"]')
+            var i;
+            for (i = 0; i < a.length; i++) {
+                var b = $(a[i]).attr('class').replace(corAtual, novaCor).replace(corAtual, novaCor)
+                $(a[i]).attr('class', b)
+            }
+            corAtual = novaCor
+            $('#nav').removeClass('show animate__animated animate__fadeIn')
+        }
+
+        function showMenuMobile() {
+            $('#nav').toggleClass('show animate__animated animate__fadeIn')
+        }
+
+
+    </script>
+
+</body>
+<!-- END: Body-->
+
+</html>

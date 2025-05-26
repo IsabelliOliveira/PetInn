@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html class="loading" data-textdirection="ltr" lang="pt">
+<!-- BEGIN: Head-->
+<head>
+<meta content="#00B5B8" name="theme-color"/>
+<link href="../app-assets/images/logo/icone.png" rel="icon" sizes="100x100"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" name="viewport"/>
+<title>PetInn Reserva</title>
+<link href="../app-assets/images/logo/icone.png" rel="apple-touch-icon"/>
+<link href="../app-assets/images/logo/icone.png" rel="shortcut icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet"/>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/99bf7606df.js">
+  document.querySelectorAll('button[data-dia]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('button[data-dia]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const diaSelecionado = btn.getAttribute('data-dia');
+      console.log("Dia selecionado:", diaSelecionado);
+    });
+  });
+</script>
+<!-- BEGIN: Vendor CSS-->
+<link href="../app-assets/vendors/css/vendors.min.css" rel="stylesheet" type="text/css"/>
+<link href="../app-assets/vendors/css/forms/selects/select2.min.css" rel="stylesheet" type="text/css"/>
+<!-- END: Vendor CSS-->
+<!-- BEGIN: Theme CSS-->
+<link href="../app-assets/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+<link href="../app-assets/css/bootstrap-extended.css" rel="stylesheet" type="text/css"/>
+<link href="../app-assets/css/colors.css" rel="stylesheet" type="text/css"/>
+<link href="../app-assets/css/components.css" rel="stylesheet" type="text/css"/>
+<!-- END: Theme CSS-->
+<!-- BEGIN: Page CSS-->
+<link href="../app-assets/css/core/menu/menu-types/horizontal-menu.css" rel="stylesheet" type="text/css"/>
+<link href="../app-assets/css/core/colors/palette-gradient.css" rel="stylesheet" type="text/css"/>
+<!-- END: Page CSS-->
+<!-- BEGIN: Custom CSS-->
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" rel="stylesheet"/>
+<!-- END: Custom CSS-->
+<style>
+         @media screen and (max-device-width: 480px) {
+            .dia-semana div, .dia-mes div { padding: 0 12px !important; margin: 0 3px !important; }
+            .horario button { padding: 10px 12px !important; margin: 3px !important;}
+            .calendario { overflow-x: scroll; }
+            .content-agenda { border-radius: 0 !important; }
+            .step {position: unset !important; margin-left: unset !important; margin-bottom: -25px; z-index: 100;}
+         }
+
+        .step {width: 50px; height: 50px; line-height: 50px; position: absolute; margin-left: -60px; }
+        .dia-semana div, .dia-mes div { flex: 1 1; padding: 0 5px; margin: 0 2px;}
+        .blocohora div { flex: 1 1; }
+        .horario button { padding: 5px; margin: 2px; }
+    </style>
+<style>
+  button[data-dia].active {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border-color: #0056b3;
+  }
+</style></head>
+<!-- END: Head-->
+<!-- BEGIN: Body-->
+<body class="bg-primary bg-accent-1">
+<main class="w-100">
+<div class="container-fluid" style="height: 100vh;">
+<div class="row match-height h-100">
+<div class="col-sm-8 col-12">
+<div class="row px-sm-3 py-sm-2">
+<div class="col-12 shadow bg-primary white d-block d-sm-none">
+<h1 class="h3 text-bold-600 text-center my-1"><a href="../index.html">PetInn /a&gt;</a></h1>
+
+<div class="row mt-1">
+<div class="col-12">
+<div class="d-flex flex-row justify-content-between px-2">
+<div class="step h3 text-bold-600 primary bg-primary bg-accent-2 rounded-pill text-center border-primary"><i aria-hidden="true" class="fa fa-check primary"></i></div>
+<div class="step h3 text-bold-600 primary bg-white rounded-pill text-center shadow border-primary animate__animated animate__heartBeat">2</div>
+<div class="step h3 text-bold-600 primary bg-primary bg-accent-1 rounded-pill text-center shadow-sm border-primary">3</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12 p-2 pb-5 shadow round bg-white content-agenda">
+<div class="text-center">
+<i aria-hidden="true" class="fa fa-calendar-check-o font-large-2 py-2"></i>
+<h3 class="text-bold-600">Escolha o dia e horário</h3>
+</div>
+<div class="d-flex flex-row justify-content-end mb-1">
+<div class="px-1"><a href="#"><i class="fas fa-chevron-left mr-1"></i></a> <a href="#"><i class="fas fa-chevron-right ml-1"></i></a></div>
+</div>
+
+<div class="d-flex flex-row flex-wrap justify-content-center mb-3">
+<button class="btn btn-outline-primary m-1" data-dia="2025-06-28">28/06 - Dom</button>
+<button class="btn btn-outline-primary m-1" data-dia="2025-06-29">29/06 - Seg</button>
+<button class="btn btn-outline-primary m-1" data-dia="2025-06-30">30/06 - Ter</button>
+<button class="btn btn-outline-primary m-1" data-dia="2025-07-01">01/07 - Qua</button>
+<button class="btn btn-outline-primary m-1" data-dia="2025-07-02">02/07 - Qui</button>
+<button class="btn btn-outline-primary m-1" data-dia="2025-07-03">03/07 - Sex</button>
+<button class="btn btn-outline-primary m-1" data-dia="2025-07-04">04/07 - Sáb</button>
+</div><div class="text-center mb-3">
+<h4 class="text-bold-600">Escolha o horário</h4>
+<div class="d-flex flex-row justify-content-center align-items-center">
+<div class="mx-2">
+<label for="hora-entrada">Entrada:</label>
+<input class="form-control" id="hora-entrada" type="time"/>
+</div>
+<div class="mx-2">
+<label for="hora-saida">Saída:</label>
+<input class="form-control" id="hora-saida" type="time"/>
+</div>
+</div>
+</div>
+<script>
+  document.querySelectorAll('button[data-dia]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const diaSelecionado = btn.getAttribute('data-dia');
+      alert("Dia selecionado: " + diaSelecionado);
+    });
+  });
+</script>
+<a class="btn btn-outline-primary shadow-sm d-none d-sm-block" href="reserva-1.html" id="" name="" style="position: absolute; bottom: 25px; left: 25px;"><i class="fa fa-caret-left mr-1"></i>Voltar</a>
+<a class="btn btn-primary shadow-sm d-none d-sm-block" href="reserva-3.html" id="" name="" style="position: absolute; bottom: 25px; right: 25px;">Avançar<i class="fa fa-caret-right ml-1"></i></a>
+</div>
+</div>
+</div>
+<div class="col-4 d-none d-sm-block bg-primary white" style="position: fixed; right: 0; bottom: 0; height: 100vh;">
+<h1 class="h2 px-1 pt-3 text-bold-600"><a href="../index.html">PetInn </a></h1>
+<br>
+<div class="px-2" style="min-height: 120px;">
+<div class="step h3 text-bold-600 primary bg-primary bg-accent-2 rounded-pill text-center border-primary"><i aria-hidden="true" class="fa fa-check primary"></i></div>
+<h5 class="text-bold-600">Escolha o serviço</h5>
+<p class="white">Você escolheu xpto.</p>
+</div>
+<div class="px-2" style="min-height: 120px;">
+<div class="step h3 text-bold-600 primary bg-white rounded-pill text-center shadow border-primary animate__animated animate__heartBeat">2</div>
+<h5 class="text-bold-600">Escolha o dia e horário</h5>
+<p class="white">Lorem ipsum dolor sit amet, consectetur.</p>
+</div>
+<div class="px-2" style="min-height: 120px;">
+<div class="step h3 text-bold-600 primary bg-primary bg-accent-1 rounded-pill text-center shadow-sm border-primary">3</div>
+<h5 class="primary accent-1">Informe seus dados</h5>
+<p class="primary accent-1">Lorem ipsum dolor sit amet, consectetur.</p>
+</div>
+<div class="row" style="position: fixed; right: 15px; bottom: 15px; z-index: 1038;">
+<div class="col-12">
+<img src="/app/app-assets/images/logo/icone.png" style="max-height: 25px;"/>
+<img src="/app/app-assets/images/logo/logo-nome.png" style="max-height: 25px;"/>
+</div>
+</div>
+</div>
+</div>
+<div class="row d-block d-sm-none">
+<div class="col-12 bg-white border-top fixed-bottom" style="padding: 5px">
+<a class="btn btn-outline-primary shadow-sm float-left" href="reserva-1.html" id="" name=""><i class="fa fa-caret-left mr-1"></i>Voltar</a>
+<a class="btn btn-primary shadow-sm float-right" href="reserva-3.html" id="" name="">Avançar<i class="fa fa-caret-right ml-1"></i></a>
+</div>
+</div>
+</div>
+</main>
+<!-- BEGIN: Vendor JS-->
+<script src="../app-assets/vendors/js/vendors.min.js"></script>
+<script src="../app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+<!-- BEGIN Vendor JS-->
+<!-- BEGIN: Page Vendor JS-->
+<script src="../app-assets/vendors/js/ui/jquery.sticky.js"></script>
+<!-- END: Page Vendor JS-->
+<!-- BEGIN: Theme JS-->
+<script src="../app-assets/js/core/app-menu.js"></script>
+<script src="../app-assets/js/core/app.js"></script>
+<script src="../app-assets/js/scripts/forms/select/form-select2.js"></script>
+<!-- END: Theme JS-->
+<!-- BEGIN: Page JS-->
+<!-- END: Page JS-->
+<script>
+        
+        $( function() {
+
+            $('.link-scroll').click( function() { 
+                var target = $(this).attr('href');
+                $('#nav').removeClass('show animate__animated animate__fadeIn')
+                $('html, body').animate({ scrollTop: $(target).offset().top - 80 }, 1500);
+            } );
+
+        })
+
+
+    </script>
+</body>
+<!-- END: Body-->
+</html>

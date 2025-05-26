@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html class="loading" lang="pt" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>tareservado - Painel Inicial</title>
+    <link rel="apple-touch-icon" href="../app-assets/images/logo/icone.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../app-assets/images/logo/icone.png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/charts/apexcharts.css">
+    <link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/extensions/sweetalert2.min.css">    
+    <link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/extensions/shepherd.min.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="../app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="../app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="../app-assets/css/components.css">
+    <!-- END: Theme CSS-->
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="../app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="../app-assets/fonts/simple-line-icons/style.min.css">
+    <link rel="stylesheet" type="text/css" href="../app-assets/css/pages/card-statistics.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <!-- END: Page CSS-->
+
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <!-- END: Custom CSS-->
+
+</head>
+<!-- END: Head-->
+
+<!-- BEGIN: Body-->
+
+<body class="vertical-layout vertical-menu 2-columns fixed-navbar" data-open="click" data-menu="vertical-menu" data-col="2-columns">
+
+    <!-- BEGIN: Header-->
+    <nav class="header-navbar navbar-expand-md navbar navbar-with-menu fixed-top navbar-dark shadow">
+        <div class="navbar-wrapper">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav flex-row align-items-center">
+                    <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="feather icon-menu font-large-1"></i></a></li>
+                    <li class="nav-item">
+                        <a class="navbar-brand" href="index.html">
+                            <img class="brand-logo" alt="stack admin logo" src="../app-assets/images/logo/icone.png">
+                            <img class="brand-text p-0" alt="stack admin logo" src="../app-assets/images/logo/logo-nome.png">
+                        </a>
+                    </li>
+                    <li class="nav-item d-md-none"><a class="nav-link open-navbar-container" data-toggle="collapse" data-target="#navbar-mobile"><i class="fa fa-ellipsis-v"></i></a></li>
+                </ul>
+            </div>
+            <div class="navbar-container content">
+                <div class="collapse navbar-collapse" id="navbar-mobile">
+                    <ul class="nav navbar-nav mr-auto float-left align-items-center">
+                        <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="feather icon-menu"></i></a></li>
+                        <li class="dropdown dropdown-notification nav-item"><a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon feather icon-bell"></i><span class="badge badge-pill badge-danger badge-up">3</span></a>
+                            <ul class="dropdown-menu dropdown-menu-media dropdown-menu-left p-0">
+                                <li class="dropdown-menu-header">
+                                    <h6 class="dropdown-header m-0"><span class="grey darken-2">Notificações para Você</span><span class="notification-tag badge badge-danger float-right m-0">3 Novas</span></h6>
+                                </li>
+                                <li class="scrollable-container media-list">
+                                    <a href="javascript:void(0)">
+                                        <div class="media">
+                                            <div class="media-left align-self-center"><i class="fa fa-check-circle icon-bg-circle bg-success"></i></div>
+                                            <div class="media-body">
+                                                <h6 class="media-heading success darken-1">2 novas reservas</h6>
+                                                <time class="media-meta text-muted font-small-3" datetime="2015-06-11T18:29:20+08:00">30 minutos atrás</time></small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:void(0)"> 
+                                        <div class="media">
+                                            <div class="media-left align-self-center"><i class="fa fa-times-circle icon-bg-circle bg-red bg-darken-1"></i></div>
+                                            <div class="media-body">
+                                                <h6 class="media-heading red darken-1">1 reserva cancelada</h6>
+                                                <time class="media-meta text-muted font-small-3" datetime="2015-06-11T18:29:20+08:00">1 hora atrás</time></small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <div class="media">
+                                            <div class="media-left align-self-center"><i class="fa fa-question-circle icon-bg-circle bg-amber"></i></div>
+                                            <div class="media-body">
+                                                <h6 class="media-heading amber">1 reserva aguardando aprovação</h6>
+                                                <time class="media-meta text-muted font-small-3" datetime="2015-06-11T18:29:20+08:00">2 horas atrás</time></small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="dropdown-menu-footer"><a class="dropdown-item text-muted text-center p-1" href="javascript:void(0)">Ler todas as notificações</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav float-right align-items-center">
+                        <li class="nav-item">
+                            <!-- <div id="reportrange" class="shadow-sm rounded p-1">
+                                <i class="fa fa-calendar"></i> <span class=""></span> <i class="fa fa-caret-down"></i>
+                            </div> -->
+                        </li>
+                        <li class="nav-item"><button class="btn btn-blue btn-sm mx-1" id="tour" onclick="tour.start();"><i class="fa fa-graduation-cap"></i> Iniciar Guia</button></li>
+                        <li class="nav-item">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary btn-sm white mr-1 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="fa fa-plus-circle"></i>Adicionar</button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item font-small-3 pt-1 pb-1" href="add-reserva.html">Reserva</a>
+                                    <a class="dropdown-item font-small-3 pt-1 pb-1" href="add-cliente.html">Cliente</a>
+                                    <a class="dropdown-item font-small-3 pt-1 pb-1" href="add-profissional.html">Profissional</a>
+                                    <a class="dropdown-item font-small-3 pt-1 pb-1" href="add-servico.html">Serviço</a>
+                                    <a class="dropdown-item font-small-3 pt-1 pb-1" href="add-servico.html">Loja</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown dropdown-user nav-item">
+                            <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                                <div class="avatar avatar-online"><img src="../app-assets/images/portrait/small/avatar-s-1.png" alt="avatar"><i></i></div><span class="user-name">John Doe</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="user-profile.html"><i class="feather icon-user"></i> Editar perfil</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="login-with-bg-image.html"><i class="feather icon-power"></i> Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- END: Header-->
+
+
+    <!-- BEGIN: Main Menu-->
+    <div class="main-menu menu-fixed menu-light menu-accordion shadow pt-1" data-scroll-to-active="true">
+        <div class="main-menu-content">
+            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+                <li class="nav-item active"><a href="index.html"><i class="fa fa-tachometer"></i><span class="menu-title">Painel Inicial</span></a></li>
+                <li class="nav-item"><a href="calendario.html"><i class="fa fa-calendar"></i><span class="menu-title">Agenda</span></a></li>
+                <li class="nav-item"><a href="#"><i class="fa fa-list-alt"></i><span class="menu-title">Reservas</span></a>
+                    <ul class="menu-content">
+                        <li><a class="menu-item" href="listar-reserva.html">Listar Reservas</a></li>
+                        <li><a class="menu-item" href="add-reserva.html">Nova Reserva</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#"><i class="fa fa-address-book-o"></i><span class="menu-title">Clientes</span></a>
+                    <ul class="menu-content">
+                        <li><a class="menu-item" href="listar-cliente.html">Listar Clientes</a></li>
+                        <li><a class="menu-item" href="add-cliente.html">Novo Cliente</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#"><i class="fa fa-pencil-square-o"></i><span class="menu-title">Gerenciar</span></a>                    
+                    <ul class="menu-content">
+                        <li><a class="menu-item" href="#">Empresa</a>
+                            <ul class="menu-content">
+                                <li><a class="menu-item" href="empresa.html">Principal</a></li>
+                                <li><a class="menu-item" href="listar-loja.html">Listar Lojas</a></li>
+                                <li><a class="menu-item" href="add-loja.html">Nova Loja</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="menu-item" href="#">Equipe</a>
+                            <ul class="menu-content">
+                                <li><a class="menu-item" href="listar-profissional.html">Listar Profissionais</a></li>
+                                <li><a class="menu-item" href="add-profissional.html">Novo Profissional</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="menu-item" href="#">Serviços</a>
+                            <ul class="menu-content">
+                                <li><a class="menu-item" href="listar-servico.html">Listar Serviços</a></li>
+                                <li><a class="menu-item" href="add-servico.html">Novo Serviço</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="menu-item" href="#">Site de Reserva</a></li>
+                        <li><a class="menu-item" href="#">Comunicações</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#"><i class="fa fa-pie-chart"></i><span class="menu-title">Relatórios</span></a></li>
+                <li class="nav-item"><a href="#"><i class="fa fa-cogs"></i><span class="menu-title">Configurações</span></a></li>            
+                <li class="nav-item"><a href="#"><i class="fa fa-credit-card"></i><span class="menu-title">Planos e Preços</span></a></li>            
+                <li class="nav-item"><a href="#"><i class="fa fa-question-circle-o"></i><span class="menu-title">Ajuda</span></a></li>                        
+            </ul>
+        </div>
+    </div>
+    <!-- END: Main Menu-->
+
+    <!-- BEGIN: Content-->
+    <div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="content-wrapper px-3">
+            <div class="content-header">
+
+            </div>    
+
+            <div class="content-body">
+                                 
+                <div class="row match-height mb-2 ">
+                    <div class="col-sm-3 col-12 px-1">
+                        <div class="card mb-0 rounded border-top-3 border-top-danger" id="reserva-pendente">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="media d-flex">
+                                        <div class="media-body text-left">
+                                            <h3 class="danger">34 <small class="font-medium-2">reservas</small></h3>
+                                            <span class="font-small-3">Para aprovação</span><br>
+                                            <button type="button" class="btn btn-outline-danger btn-sm mt-1">ver reservas</button>
+                                        </div>
+                                        <div class="align-self-top">
+                                            <i class="far fa-calendar danger font-large-2 float-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-12 px-1">
+                        <div class="card mb-0 rounded border-top-3 border-top-primary" id="reserva-confirmada-hoje">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="media d-flex">
+                                        <div class="media-body text-left">
+                                            <h3 class="primary">39 <small class="font-medium-2">reservas</small></h3>
+                                            <span class="font-small-3">Aprovadas</span><br>
+                                            <button type="button" class="btn btn-outline-primary btn-sm mt-1">ver reservas</button>
+                                        </div>
+                                        <div class="align-self-top">
+                                            <i class="fa fa-calendar-check-o primary font-large-2 float-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-12 px-1">
+                        <div class="card mb-0 rounded border-top-3 border-top-success" id="reserva-confirmada">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="media d-flex">
+                                        <div class="media-body text-left">
+                                            <h3 class="success">48 <small class="font-medium-2">reservas</small></h3>
+                                            <span class="font-small-3">Já atendidas</span><br>
+                                            <button type="button" class="btn btn-outline-success btn-sm mt-1">ver reservas</button>
+                                        </div>
+                                        <div class="align-self-top">
+                                            <i class="fas fa-calendar-check success font-large-2 float-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-12 px-1">
+                        <div class="card mb-0 rounded border-top-3 border-top-blue" id="total-clientes">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="media d-flex">
+                                        <div class="media-body text-left">
+                                            <h3 class="blue">74 <small class="font-medium-2">clientes</small></h3>
+                                            <span class="font-small-3">Já atendidos</span><br>
+                                            <button type="button" class="btn btn-outline-blue btn-sm mt-1">ver clientes</button>
+                                        </div>
+                                        <div class="align-self-top">
+                                            <i class="fa fa-user-check blue font-large-2 float-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row match-height mb-2">
+                    <div class="col-md-6 col-12 px-1">
+                        <!-- Line Basic Chart Start -->
+                        <div class="card my-0 rounded border-top-3 border-top-success">
+                            <div class="card-body">
+                                <div class="card-title mb-0">Evolução dia a dia de Reservas</div>
+                                <div id="line-basic-chart"></div>
+                                <small class="text-muted">Evolução de reservas realizadas por dia nos últimos 7 dias.</small>
+                            </div>
+                        </div>
+                        <!-- line basic chart end -->
+                    </div>
+                    <div class="col-md-6 col-12 px-1">
+                        <!-- Heatmap Basic Chart Start -->
+                        <div class="card my-0 rounded border-top-3 border-top-primary">
+                            <div class="card-body">
+                                <div class="card-title mb-0">Reservas por horário do dia</div>
+                                <div id="heatmap-basic-chart"></div>
+                                <small class="text-muted">Quanto mais escuro for o quadrado, maior o número de reservas.</small>
+                            </div>
+                        </div>
+                        <!-- Heatmap Basic Chart end -->
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 px-1">
+                        <div class="card rounded border-top-3 border-top-info">
+                            <div class="card-header">
+                                <h4 class="card-title">Reservas Recentes</h4>
+                                <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+                                <div class="heading-elements">
+                                    <ul class="list-inline mb-0">
+                                        <li><a data-action="reload"><i class="feather icon-rotate-cw"></i></a></li>
+                                        <li><a data-action="expand"><i class="feather icon-maximize"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="table-responsive">
+                                    <table class="table table-striped mb-0 ps-container ps-theme-default">
+                                        <thead class="">
+                                            <tr>
+                                                <th class="pl-2">Codigo</th>
+                                                <th>Cliente</th>
+                                                <th>Profissional</th>
+                                                <th>Serviço</th>
+                                                <th>Reserva</th>
+                                                <th>Data</th>
+                                                <th>Hora</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="">
+                                            <tr>
+                                                <td class="text-truncate pl-2">TR-10521</td>
+                                                <td class="text-truncate">Elizabeth Farias</td>
+                                                <td class="text-truncate">Joana Prado</td>
+                                                <td class="text-truncate">Corte Feminino</td>
+                                                <td class="text-truncate"><span class="badge badge-warning">Pendente</span></td>
+                                                <td class="text-truncate">08/05</td>
+                                                <td class="text-truncate">11:00</td>
+                                                <td class="text-truncate">
+                                                    <div class="btn-group" role="group">
+                                                        <button type="button" class="btn btn-icon btn-pure success reserva-ok" title="Confirmar"><i class="fa fa-check"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-pure primary" title="Reagendar"><i class="fa fa-retweet"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-pure danger reserva-cancelada" title="Cancelar"><i class="fa fa-times"></i></button>
+                                                     </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-truncate pl-2">TR-10456</td>
+                                                <td class="text-truncate">Thais Araujo</td>
+                                                <td class="text-truncate">Marisa Montes</td>
+                                                <td class="text-truncate">Corte Feminino</td>
+                                                <td class="text-truncate"><span class="badge badge-success">Confirmada</span></td>
+                                                <td class="text-truncate">08/05</td>
+                                                <td class="text-truncate">11:00</td>
+                                                <td class="text-truncate">
+                                                    <div class="btn-group" role="group">
+                                                        <button type="button" class="btn btn-icon btn-pure success reserva-ok" title="Confirmar"><i class="fa fa-check"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-pure primary" title="Reagendar"><i class="fa fa-retweet"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-pure danger reserva-cancelada" title="Cancelar"><i class="fa fa-times"></i></button>
+                                                     </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-truncate pl-2">TR-10789</td>
+                                                <td class="text-truncate">Elias Maluco</td>
+                                                <td class="text-truncate">Sena</td>
+                                                <td class="text-truncate">Corte Masculino</td>
+                                                <td class="text-truncate"><span class="badge badge-success">Confirmada</span></td>
+                                                <td class="text-truncate">08/05</td>
+                                                <td class="text-truncate">11:00</td>
+                                                <td class="text-truncate">
+                                                    <div class="btn-group" role="group">
+                                                        <button type="button" class="btn btn-icon btn-pure success reserva-ok" title="Confirmar"><i class="fa fa-check"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-pure primary" title="Reagendar"><i class="fa fa-retweet"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-pure danger reserva-cancelada" title="Cancelar"><i class="fa fa-times"></i></button>
+                                                     </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-truncate pl-2">TR-10987</td>
+                                                <td class="text-truncate">Cássia Kiss</td>
+                                                <td class="text-truncate">Marcia Miranda</td>
+                                                <td class="text-truncate">Corte Feminino</td>
+                                                <td class="text-truncate"><span class="badge badge-danger">Cancelada</span></td>
+                                                <td class="text-truncate">08/05</td>
+                                                <td class="text-truncate">11:00</td>
+                                                <td class="text-truncate">
+                                                    <div class="btn-group" role="group">
+                                                        <button type="button" class="btn btn-icon btn-pure success reserva-ok" title="Confirmar"><i class="fa fa-check"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-pure primary" title="Reagendar"><i class="fa fa-retweet"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-pure danger reserva-cancelada" title="Cancelar"><i class="fa fa-times"></i></button>
+                                                     </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-truncate pl-2">TR-1043</td>
+                                                <td class="text-truncate">Paulinho da Viola</td>
+                                                <td class="text-truncate">Helio Fonseca</td>
+                                                <td class="text-truncate">Barba e Bigode</td>
+                                                <td class="text-truncate"><span class="badge badge-success">Confirmada</span></td>
+                                                <td class="text-truncate">08/05</td>
+                                                <td class="text-truncate">11:00</td>
+                                                <td class="text-truncate">
+                                                    <div class="btn-group" role="group">
+                                                        <button type="button" class="btn btn-icon btn-pure success reserva-ok" title="Confirmar"><i class="fa fa-check"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-pure primary" title="Reagendar"><i class="fa fa-retweet"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-pure danger reserva-cancelada" title="Cancelar"><i class="fa fa-times"></i></button>
+                                                     </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- END: Content-->
+
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+
+    <!-- BEGIN: Footer-->
+    <footer class="footer footer-static footer-light navbar-border">
+        <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2"><span class="float-md-left d-block d-md-inline-block">Copyright &copy; 2020 <a class="text-bold-800 grey darken-2" href="#" target="_blank">tareservado </a></span><span class="float-md-right d-none d-lg-block"></span></p>
+    </footer>
+    <!-- END: Footer-->
+
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="../app-assets/vendors/js/vendors.min.js"></script>
+    <script src="../assets/js/scripts.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="../app-assets/vendors/js/charts/apexcharts/apexcharts.min.js"></script>
+    <script src="../app-assets/vendors/js/extensions/sweetalert2.all.min.js"></script>
+    <script src="../app-assets/vendors/js/extensions/polyfill.min.js"></script>
+    <script src="../app-assets/vendors/js/extensions/shepherd.min.js"></script>
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="../app-assets/js/core/app-menu.js"></script>
+    <script src="../app-assets/js/core/app.js"></script>
+    <script src="https://kit.fontawesome.com/99bf7606df.js" crossorigin="anonymous"></script>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="../app-assets/js/scripts/charts/apexcharts/charts-apexcharts.js"></script>
+    <script src="../app-assets/js/scripts/extensions/sweet-alerts.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>    
+    <!-- END: Page JS-->
+
+    <script type="text/javascript">
+        $(function() {
+        
+            var start = moment().subtract(6, 'days');
+            var end = moment();
+        
+            function cb(start, end) {
+                $('#reportrange span').html(start.format('DD/MM/YYYY') + ' - ' + end.format('DD/MM/YYYY'));
+            }
+        
+            $('#reportrange').daterangepicker({
+                startDate: start,
+                endDate: end,
+                ranges: {
+                   'Hoje': [moment(), moment()],
+                   'Ontem': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                   'Últimos 7 dias': [moment().subtract(6, 'days'), moment()],
+                   'Últimos 30 dias': [moment().subtract(29, 'days'), moment()],
+                   'Este mês': [moment().startOf('month'), moment().endOf('month')],
+                   'Mês passado': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                },
+                locale: {
+                    "applyLabel": "Aplicar",
+                    "cancelLabel": "Cancelar",
+                    "customRangeLabel": "Escolher datas",
+                    "daysOfWeek": [
+                        "Dom",
+                        "Seg",
+                        "Ter",
+                        "Qua",
+                        "Qui",
+                        "Sex",
+                        "Sab"
+                    ],
+                    "monthNames": [
+                        "Janeiro",
+                        "Fevereiro",
+                        "Março",
+                        "Abril",
+                        "Maio",
+                        "Junho",
+                        "Julho",
+                        "Agosto",
+                        "Setembro",
+                        "Outubro",
+                        "Novembro",
+                        "Dezembro"
+                    ]
+                }
+            }, cb);
+        
+            cb(start, end);
+        
+        });
+    </script>
+
+    <script>
+        const tour = new Shepherd.Tour({
+        defaultStepOptions: {
+            cancelIcon: {enabled: true},
+            classes: 'tour-container',
+            scrollTo: { behavior: 'smooth', block: 'center' }
+        },
+        useModalOverlay: true
+        });
+
+        tour.addStep({
+            title: 'Total de Reservas Pendentes',
+            text: 'Veja todas as reservas que aguardam a sua aprovação.',
+        attachTo: { element: '#reserva-pendente', on: 'right'},
+        buttons: [
+            { action() { return this.next(); },
+            classes: 'btn btn-outline-info btn-sm', text: 'próximo' } ],
+        id: 'creating' });
+
+        tour.addStep({
+        title: 'Reservas Aprovadas',
+        text: 'Veja todas as reservas aprovadas, mas que o serviço ainda não foi atendido.',
+        attachTo: { element: '#reserva-confirmada-hoje', on: 'bottom' },
+        buttons: [
+            { action() { return this.back(); },
+            classes: 'btn btn-outline-info btn-sm', text: 'voltar' },
+            { action() { return this.next(); },
+            classes: 'btn btn-outline-info btn-sm', text: 'próximo' } ]
+        });
+
+        tour.addStep({
+        title: 'Total de Reservas Atendidas',
+        text: 'Veja todas as reservas que já foram atendidas por sua empresa.',
+        attachTo: { element: '#reserva-confirmada', on: 'bottom' },
+        buttons: [
+            { action() { return this.back(); },
+            classes: 'btn btn-outline-info btn-sm', text: 'voltar' },
+            { action() { return this.next(); },
+            classes: 'btn btn-outline-info btn-sm', text: 'próximo' } ]
+        });
+
+        tour.addStep({
+        title: 'Total de Clientes',
+        text: 'Veja todos os clientes que foram atendidos.',
+        attachTo: { element: '#total-clientes', on: 'bottom' },
+        buttons: [
+        { action() { return this.back(); },
+            classes: 'btn btn-outline-info btn-sm', text: 'voltar' },
+            { action() { return this.cancel(); },
+            classes: 'btn btn-outline-info btn-sm', text: 'sair' } ]
+        });
+        
+    </script>
+
+</body>
+<!-- END: Body-->
+
+</html>
